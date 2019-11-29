@@ -10,6 +10,7 @@ import com.jetbrains.cidr.execution.testing.CidrBeforeTestRunTaskProvider;
 import com.jetbrains.cidr.execution.testing.tcatch.CidrCatchTestRunConfigurationData;
 import com.jetbrains.cidr.execution.testing.tcatch.CidrCatchTestRunConfigurationEditor;
 import icons.CidrLangIcons;
+import icons.CidrCatchIcons;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
@@ -17,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class CMakeRunPatcherCatchTestRunConfigurationType extends CMakeRunConfigurationType implements CidrBeforeTestRunTaskProvider.CidrBeforeRunTaskConverter {
     protected CMakeRunPatcherCatchTestRunConfigurationType() {
-        super("CMakeCatchTestRunConfigurationType", "Catch Test", CidrBundle.message("catch.test.configuration.name", new Object[0]), CidrBundle.message("catch.test.configuration.description", new Object[0]), NotNullLazyValue.createValue(() -> CidrLangIcons.CatchTest));
+        super("CMakeCatchTestRunConfigurationType", "Catch Test", CidrBundle.message("Catch Test", new Object[0]), CidrBundle.message("Catch Test configuration", new Object[0]), NotNullLazyValue.createValue(() -> CidrCatchIcons.CatchTest));
     }
 
     @NotNull

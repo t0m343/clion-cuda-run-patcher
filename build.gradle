@@ -23,14 +23,16 @@ tasks.withType(JavaCompile) {
 }
 
 intellij {
-    version '2019.2'
+    version '2019.3'
     type 'CL'
-    alternativeIdePath clionHome
+ //   alternativeIdePath clionHome
     pluginName 'cuda-run-patcher'
+    plugins 'clion-test-google','clion-test-boost','clion-test-catch'
 }
 
+
 patchPluginXml {
-    sinceBuild '192'
+    sinceBuild '193'
 
     changeNotes """
       <em>1.0.0</em><br/>

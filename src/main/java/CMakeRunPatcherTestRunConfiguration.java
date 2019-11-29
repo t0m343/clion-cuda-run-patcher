@@ -1,4 +1,5 @@
 import com.intellij.execution.Executor;
+import com.intellij.execution.configurations.CommandLineState;
 import com.intellij.execution.configurations.ConfigurationFactory;
 import com.intellij.execution.configurations.RunConfiguration;
 import com.intellij.execution.configurations.RuntimeConfigurationException;
@@ -27,7 +28,7 @@ public class CMakeRunPatcherTestRunConfiguration extends CMakeRunPatcherAppRunCo
         return this.myTestData;
     }
 
-    public CidrCommandLineState getState(@NotNull Executor executor, @NotNull ExecutionEnvironment env) {
+    public CommandLineState getState(@NotNull Executor executor, @NotNull ExecutionEnvironment env) {
         return this.createState(env, executor, null);
     }
 

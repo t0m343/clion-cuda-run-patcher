@@ -10,14 +10,15 @@ import com.jetbrains.cidr.execution.testing.CidrBeforeTestRunTaskProvider;
 import com.jetbrains.cidr.execution.testing.boost.CidrBoostTestRunConfigurationData;
 import com.jetbrains.cidr.execution.testing.boost.CidrBoostTestRunConfigurationEditor;
 import icons.CidrLangIcons;
+import icons.CidrBoostIcons;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
-
+import com.jetbrains.cidr.execution.testing.boost.*;
 // replaces com.jetbrains.cidr.cpp.execution.testing.boost.CMakeBoostTestRunConfigurationType
 
 public class CMakeRunPatcherBoostTestRunConfigurationType extends CMakeRunConfigurationType implements CidrBeforeTestRunTaskProvider.CidrBeforeRunTaskConverter {
     protected CMakeRunPatcherBoostTestRunConfigurationType() {
-        super("CMakeBoostTestRunConfigurationType", "Boost Test", CidrBundle.message("boost.test.configuration.name", new Object[0]), CidrBundle.message("boost.test.configuration.description", new Object[0]), NotNullLazyValue.createValue(() -> CidrLangIcons.BoostTest));
+        super("CMakeBoostTestRunConfigurationType", "Boost Test", CidrBundle.message("boost.test.configuration.name", new Object[0]), CidrBundle.message("boost.test.configuration.description", new Object[0]), NotNullLazyValue.createValue(() -> CidrBoostIcons.BoostTest));
     }
 
     @NotNull
