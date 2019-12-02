@@ -18,13 +18,13 @@ import org.jetbrains.annotations.NotNull;
 
 public class CMakeRunPatcherCatchTestRunConfigurationType extends CMakeRunConfigurationType implements CidrBeforeTestRunTaskProvider.CidrBeforeRunTaskConverter {
     protected CMakeRunPatcherCatchTestRunConfigurationType() {
-        super("CMakeCatchTestRunConfigurationType", "Catch Test", CidrBundle.message("Catch Test", new Object[0]), CidrBundle.message("Catch Test configuration", new Object[0]), NotNullLazyValue.createValue(() -> CidrCatchIcons.CatchTest));
+        super("CMakeCatchTestRunConfigurationType", "Catch Test", "Catch Test Cuda", "Catch Test with Cuda Enabled", NotNullLazyValue.createValue(() -> CidrCatchIcons.CatchTest));
     }
 
     @NotNull
     @Contract("_, _ -> new")
     protected CMakeAppRunConfiguration createRunConfiguration(@NotNull Project project, @NotNull ConfigurationFactory factory) {
-        return new CMakeRunPatcherTestRunConfiguration(project, factory, "", CidrCatchTestRunConfigurationData.FACTORY);
+        return new CMakeRunPatcherTestRunConfiguration(project, factory, "Cuda Enabled Catch Test", CidrCatchTestRunConfigurationData.FACTORY);
     }
 
     @NotNull

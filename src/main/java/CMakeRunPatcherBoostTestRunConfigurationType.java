@@ -18,13 +18,13 @@ import com.jetbrains.cidr.execution.testing.boost.*;
 
 public class CMakeRunPatcherBoostTestRunConfigurationType extends CMakeRunConfigurationType implements CidrBeforeTestRunTaskProvider.CidrBeforeRunTaskConverter {
     protected CMakeRunPatcherBoostTestRunConfigurationType() {
-        super("CMakeBoostTestRunConfigurationType", "Boost Test", CidrBundle.message("boost.test.configuration.name", new Object[0]), CidrBundle.message("boost.test.configuration.description", new Object[0]), NotNullLazyValue.createValue(() -> CidrBoostIcons.BoostTest));
+        super("CMakeBoostTestRunConfigurationType", "Boost Test", "Boost Test Cuda", "Boost Test with Cuda Enabled", NotNullLazyValue.createValue(() -> CidrBoostIcons.BoostTest));
     }
 
     @NotNull
     @Contract("_, _ -> new")
     protected CMakeAppRunConfiguration createRunConfiguration(@NotNull Project project, @NotNull ConfigurationFactory factory) {
-        return new CMakeRunPatcherTestRunConfiguration(project, factory, "", CidrBoostTestRunConfigurationData.FACTORY);
+        return new CMakeRunPatcherTestRunConfiguration(project, factory, "Cuda Boost Test", CidrBoostTestRunConfigurationData.FACTORY);
     }
 
     @NotNull
